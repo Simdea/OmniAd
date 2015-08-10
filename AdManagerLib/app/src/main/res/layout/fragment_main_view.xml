@@ -11,7 +11,7 @@
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <simdea.admanager.Manager
+    <FrameLayout
         android:id="@+id/admanager"
         android:layout_width="match_parent"
         android:layout_height="50dp"
