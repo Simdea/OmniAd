@@ -1,4 +1,4 @@
-package simdea.admanagerlib;
+package com.simdea.omniad.sample;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

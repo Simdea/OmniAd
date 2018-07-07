@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "168890004056",
+    "firebase_url": "https://omniad-demo.firebaseio.com",
+    "project_id": "omniad-demo",
+    "storage_bucket": "omniad-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168890004056:android:ca96e6d04a5bf03f",
+        "android_client_info": {
+          "package_name": "com.simdea.omniad.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168890004056-kh2calg1lglrp70286tbg3pfc2bblqn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5L0wynaW1i_PWZ3n3Zstd33hN5t2wrek"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
