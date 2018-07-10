@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. Simdea.
+ */
+
 package com.simdea.omniad.sample;
 
 import android.os.Bundle;

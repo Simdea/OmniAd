@@ -5,7 +5,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+
+import com.simdea.omniad.AdMobProvider;
+import com.simdea.omniad.RandomAdView;
 
 
 /**
@@ -21,8 +23,9 @@ public class MainViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_main_view, container, false);
 
-        FrameLayout layout = (FrameLayout) v.findViewById(R.id.admanager);
-
+        RandomAdView layout = v.findViewById(R.id.admanager);
+        layout.register(new AdMobProvider(getContext(), "ca-app-pub-6371453241242670/8838057599"));
+        layout.loadAds(getContext());
         return v;
     }
 }

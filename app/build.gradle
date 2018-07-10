@@ -22,6 +22,7 @@ android {
 dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation project(':omniad')
 }
 
 apply plugin: 'com.google.gms.google-services'

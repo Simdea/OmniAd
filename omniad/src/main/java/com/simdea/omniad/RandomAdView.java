@@ -26,19 +26,28 @@ public class RandomAdView extends FrameLayout implements IAdCallback {
 
     public RandomAdView(Context context) {
         super(context);
+        init();
     }
 
     public RandomAdView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public RandomAdView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public RandomAdView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        init();
+    }
+
+    public void register(AbstractAdProvider provider) {
+        providers.add(provider);
+        provider.setCallbackListener(this);
     }
 
     private void init() {
