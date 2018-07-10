@@ -4,13 +4,12 @@
 
 package com.simdea.omniad;
 
-import android.app.Activity;
-import android.widget.LinearLayout;
+import android.content.Context;
 
 public abstract class AbstractAdProvider {
     protected IAdCallback callback;
 
-    public abstract void tryLoadAd(Activity actv, LinearLayout layout);
+    public abstract void tryLoadAd(Context actv, RandomAdView layout);
 
     public abstract void stop();
 

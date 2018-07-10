@@ -1,9 +1,7 @@
 package com.simdea.omniad;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
-import android.widget.LinearLayout;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -37,11 +35,32 @@ public class AdMobProvider extends AbstractAdProvider {
     }
 
     @Override
-    public void tryLoadAd(Activity actv, LinearLayout layout) {
+    public void tryLoadAd(Context actv, RandomAdView layout) {
         Log.d("Ads", "loading AdMob");
         mAdView = new AdView(mContext);
         mAdView.setAdListener(new AdListener() {
+            public void onAdClosed() {
+            }
 
+            public void onAdFailedToLoad(int var1) {
+                stop();
+                onLoadFailed();
+            }
+
+            public void onAdLeftApplication() {
+            }
+
+            public void onAdOpened() {
+            }
+
+            public void onAdLoaded() {
+            }
+
+            public void onAdClicked() {
+            }
+
+            public void onAdImpression() {
+            }
         });
         layout.addView(mAdView);
         AdRequest.Builder builder = new AdRequest.Builder();
