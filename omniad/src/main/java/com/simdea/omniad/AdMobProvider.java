@@ -14,8 +14,8 @@ public class AdMobProvider extends AbstractAdProvider {
     private Context mContext;
     private AdView mAdView;
 
-    private String publisherId;
-    private AdSize size;
+    private String mPublisherId;
+    private AdSize mSize;
     private String testingDevice;
 
     public AdMobProvider(Context context, String publisherId) {
@@ -30,14 +30,16 @@ public class AdMobProvider extends AbstractAdProvider {
     }
 
     public AdMobProvider(String publisherId, AdSize size) {
-        this.publisherId = publisherId;
-        this.size = size;
+        this.mPublisherId = publisherId;
+        this.mSize = size;
     }
 
     @Override
     public void tryLoadAd(Context actv, RandomAdView layout) {
         Log.d("Ads", "loading AdMob");
         mAdView = new AdView(mContext);
+        mAdView.setAdSize(mSize);
+        mAdView.setAdUnitId(mPublisherId);
         mAdView.setAdListener(new AdListener() {
             public void onAdClosed() {
             }
